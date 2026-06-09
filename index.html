@@ -6,7 +6,7 @@
 <title>Sampath Kumar | SharePoint & Power Platform Developer</title>
 
 <!-- SEO Meta Tags -->
-<meta name="description" content="CH V S S Sampath Kumar — SharePoint & Power Platform Developer with 4.6+ years of experience in SPFx, ReactJS, Power Apps, Power Automate, and enterprise Microsoft 365 solutions for Medtronic and Amgen." />
+<meta name="description" content="CH V S S Sampath Kumar — SharePoint & Power Platform Developer with 4.6+ years of experience in SPFx, ReactJS, Power Apps, Power Automate, and enterprise Microsoft 365 solutions for Fortune 500 healthcare and pharma companies." />
 <meta name="keywords" content="SharePoint Developer, SPFx Developer, Power Platform Developer, Power Apps, Power Automate, ReactJS, Microsoft 365, Hyderabad" />
 <meta name="author" content="CH V S S Sampath Kumar" />
 <meta name="robots" content="index, follow" />
@@ -15,7 +15,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://my-portfolio-sharepoint-developer.vercel.app/" />
 <meta property="og:title" content="Sampath Kumar | SharePoint & Power Platform Developer" />
-<meta property="og:description" content="4.6+ years building enterprise SharePoint Online portals, SPFx components, and Power Platform solutions for Fortune 500 companies like Medtronic and Amgen." />
+<meta property="og:description" content="4.6+ years building enterprise SharePoint Online portals, SPFx components, and Power Platform solutions for Fortune 500 healthcare and pharmaceutical companies." />
 <meta property="og:image" content="https://my-portfolio-sharepoint-developer.vercel.app/photo.jpg" />
 
 <!-- Twitter Card -->
@@ -470,6 +470,89 @@
   }
   .project-card:hover .tech-tag { color: var(--accent-2); border-color: var(--border-hover); }
 
+
+  /* ── CERTIFICATIONS ── */
+  #certifications { background: var(--bg-2); }
+  .cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .cert-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px; padding: 2rem;
+    display: flex; gap: 1.25rem; align-items: flex-start;
+    transition: all .35s; position: relative; overflow: hidden;
+  }
+  .cert-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+    transform: scaleY(0); transform-origin: top;
+    transition: transform .35s;
+  }
+  .cert-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 12px 40px rgba(59,130,246,0.15);
+    transform: translateY(-5px);
+  }
+  .cert-card:hover::before { transform: scaleY(1); }
+  .cert-badge {
+    width: 72px; height: 72px; border-radius: 14px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--accent-faint);
+    border: 1px solid var(--border-hover);
+    overflow: hidden; padding: 6px;
+    transition: transform .3s, box-shadow .3s;
+  }
+  .cert-badge img {
+    width: 100%; height: 100%; object-fit: contain;
+    border-radius: 8px;
+  }
+  .cert-card:hover .cert-badge {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(59,130,246,0.3);
+  }
+  .cert-card-link {
+    text-decoration: none; color: inherit;
+    display: flex; gap: 1.25rem; align-items: flex-start;
+    width: 100%;
+  }
+  .cert-verify {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--accent); background: var(--accent-faint);
+    border: 1px solid var(--border-hover);
+    border-radius: 100px; padding: 0.22rem 0.65rem;
+    transition: all .2s;
+  }
+  .cert-card:hover .cert-verify {
+    background: var(--accent); color: #fff;
+  }
+  .cert-body { flex: 1; }
+  .cert-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--text-primary); margin-bottom: 0.3rem; line-height: 1.3;
+  }
+  .cert-issuer {
+    font-size: 0.8rem; color: var(--accent-2);
+    font-weight: 500; margin-bottom: 0.75rem;
+  }
+  .cert-meta { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+  .cert-status {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+    color: #22c55e; background: rgba(34,197,94,0.08);
+    border: 1px solid rgba(34,197,94,0.25);
+    border-radius: 100px; padding: 0.22rem 0.65rem;
+  }
+  .cert-id {
+    font-size: 0.7rem; font-weight: 500;
+    color: var(--text-muted); background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 100px; padding: 0.22rem 0.65rem;
+  }
+
   /* ── EDUCATION ── */
   #education { background: var(--bg-2); }
   .edu-card {
@@ -546,6 +629,48 @@
   }
   footer span { color: var(--accent); }
 
+
+  /* ── UDEMY CERTS ── */
+  #udemy-certs { }
+  .udemy-badge {
+    background: #1c0533 !important;
+    border-color: rgba(164,53,240,0.3) !important;
+    padding: 10px !important;
+  }
+  .cert-tag {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--tag-color, var(--accent));
+    background: color-mix(in srgb, var(--tag-color, var(--accent)) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--tag-color, var(--accent)) 30%, transparent);
+    border-radius: 100px; padding: 0.22rem 0.65rem;
+  }
+  .udemy-card:hover { border-color: rgba(164,53,240,0.4) !important; }
+  .udemy-card:hover::before {
+    background: linear-gradient(to bottom, #a435f0, #7c3aed) !important;
+  }
+  .section-tabs {
+    display: flex; gap: 0.75rem; margin-bottom: 3rem; flex-wrap: wrap;
+  }
+  .section-tab {
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em;
+    padding: 0.45rem 1.1rem; border-radius: 100px;
+    border: 1px solid var(--border); color: var(--text-muted);
+    background: var(--bg-card); cursor: pointer;
+    transition: all .2s; text-transform: uppercase;
+  }
+  .section-tab.active, .section-tab:hover {
+    border-color: var(--accent); color: var(--accent);
+    background: var(--accent-faint);
+  }
+
+
+  /* ── PROJECT HIGHLIGHTS ── */
+  .project-highlights { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 0.75rem; }
+  .proj-highlight {
+    font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6;
+    display: flex; gap: 0.5rem; align-items: flex-start;
+  }
+
   /* ── SCROLL ANIMATIONS ── */
   .reveal {
     opacity: 0; transform: translateY(30px);
@@ -602,7 +727,9 @@
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
       <a href="#education">Education</a>
+      <a href="#udemy-certs">Courses</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-right">
@@ -617,7 +744,9 @@
     <a href="#skills" onclick="closeMobile()">Skills</a>
     <a href="#experience" onclick="closeMobile()">Experience</a>
     <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#certifications" onclick="closeMobile()">Certifications</a>
     <a href="#education" onclick="closeMobile()">Education</a>
+    <a href="#udemy-certs" onclick="closeMobile()">Courses</a>
     <a href="#contact" onclick="closeMobile()">Contact</a>
   </div>
 </nav>
@@ -645,7 +774,7 @@
           <a href="#projects" class="btn-ghost">
             <span>View Projects</span>
           </a>
-          <a href="resume.pdf" download="Sampath_Kumar_Resume.pdf" class="btn-ghost" style="gap:0.4rem;">
+          <a href="./resume.pdf" download="Sampath_Kumar_Resume.pdf" class="btn-ghost" style="gap:0.4rem;">
             <span>⬇</span>
             <span>Resume</span>
           </a>
@@ -669,7 +798,7 @@
         <div class="hero-photo-ring"></div>
         <img
           class="hero-photo"
-          src="photo.jpg"
+          src="./photo.jpg"
           alt="Sampath Kumar"
           onerror="this.style.display='none';document.getElementById('heroFallback').style.display='flex';"
         />
@@ -692,7 +821,7 @@
         <div class="about-floating">
           <div class="about-floating-icon">🏆</div>
           <div>
-            <div class="about-floating-text">Medtronic · Amgen</div>
+            <div class="about-floating-text">Healthcare · Pharma</div>
             <div class="about-floating-sub">Enterprise Clients</div>
           </div>
         </div>
@@ -720,9 +849,10 @@
     <div class="section-head reveal">
       <div class="section-label">What I Work With</div>
       <h2 class="section-title">Skills & Technologies</h2>
-      <p class="section-sub">A focused stack built around Microsoft 365, modern SharePoint development, and the Power Platform ecosystem.</p>
+      <p class="section-sub">A comprehensive stack built around Microsoft 365, SharePoint development, Power Platform, and modern frontend & backend technologies.</p>
     </div>
     <div class="skills-grid">
+
       <div class="skill-category reveal delay-1">
         <div class="skill-cat-icon">⚡</div>
         <div class="skill-cat-title">SharePoint & SPFx</div>
@@ -730,16 +860,23 @@
           <span class="skill-tag">SharePoint Online</span>
           <span class="skill-tag">SPFx</span>
           <span class="skill-tag">SharePoint Framework</span>
+          <span class="skill-tag">OOTB Web Parts</span>
+          <span class="skill-tag">Site Creation</span>
+          <span class="skill-tag">Workflows</span>
+          <span class="skill-tag">Extensions</span>
           <span class="skill-tag">Document Libraries</span>
           <span class="skill-tag">SharePoint Search</span>
           <span class="skill-tag">Metadata Management</span>
           <span class="skill-tag">RBAC & Permissions</span>
         </div>
       </div>
+
       <div class="skill-category reveal delay-2">
         <div class="skill-cat-icon">⚛️</div>
         <div class="skill-cat-title">Frontend</div>
         <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
           <span class="skill-tag">ReactJS</span>
           <span class="skill-tag">TypeScript</span>
           <span class="skill-tag">JavaScript</span>
@@ -748,7 +885,20 @@
           <span class="skill-tag">Cross-browser Compat.</span>
         </div>
       </div>
+
       <div class="skill-category reveal delay-3">
+        <div class="skill-cat-icon">🖥️</div>
+        <div class="skill-cat-title">Backend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">PnP.js</span>
+          <span class="skill-tag">SharePoint Lists</span>
+          <span class="skill-tag">SharePoint Libraries</span>
+        </div>
+      </div>
+
+      <div class="skill-category reveal delay-4">
         <div class="skill-cat-icon">🔧</div>
         <div class="skill-cat-title">Power Platform</div>
         <div class="skill-tags">
@@ -758,9 +908,12 @@
           <span class="skill-tag">Dataverse</span>
           <span class="skill-tag">Approval Flows</span>
           <span class="skill-tag">Notification Flows</span>
+          <span class="skill-tag">Copilot Studio</span>
+          <span class="skill-tag">AI Agents</span>
         </div>
       </div>
-      <div class="skill-category reveal delay-4">
+
+      <div class="skill-category reveal delay-1">
         <div class="skill-cat-icon">☁️</div>
         <div class="skill-cat-title">Microsoft 365 & Cloud</div>
         <div class="skill-tags">
@@ -772,6 +925,7 @@
           <span class="skill-tag">Multi-language Apps</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -792,12 +946,12 @@
             <div class="exp-role">SharePoint & Power Platform Developer</div>
             <div class="exp-duration">Oct 2021 – Present</div>
           </div>
-          <div class="exp-company">Medtronic · Amgen — Hyderabad, India</div>
+          <div class="exp-company">Enterprise Healthcare & Pharma Clients — Hyderabad, India</div>
           <div class="exp-achievements">
             <div class="exp-ach">Designed and developed custom SPFx web parts using ReactJS to implement advanced document filtering, search, and dynamic UI components for global enterprise portals.</div>
             <div class="exp-ach">Built Power Apps Canvas applications with Dataverse backend for supplier management, room booking systems, and training data portals deployed across Asia-Pacific regions.</div>
             <div class="exp-ach">Engineered Power Automate workflows for document approvals, governance alerts, real-time notifications, and automated business process tracking — reducing manual effort significantly.</div>
-            <div class="exp-ach">Implemented metadata-driven document libraries and role-based access controls to protect confidential client data at Medtronic and Amgen.</div>
+            <div class="exp-ach">Implemented metadata-driven document libraries and role-based access controls to protect confidential client data across enterprise deployments.</div>
             <div class="exp-ach">Developed React-Table–based card views with server-side pagination, custom filters, sorting, and user-preference persistence for a personalized SharePoint browsing experience.</div>
           </div>
         </div>
@@ -812,14 +966,14 @@
     <div class="section-head reveal">
       <div class="section-label">What I've Built</div>
       <h2 class="section-title">Projects</h2>
-      <p class="section-sub">Enterprise solutions delivered for Fortune 500 pharmaceutical and medical device companies.</p>
+      <p class="section-sub">Enterprise solutions delivered for Fortune 500 healthcare and pharmaceutical companies across Microsoft 365 and Power Platform.</p>
     </div>
     <div class="projects-grid">
 
       <div class="project-card reveal delay-1">
         <div class="project-header">
           <div class="project-icon">🔒</div>
-          <div class="project-client-badge">Medtronic</div>
+          <div class="project-client-badge">Healthcare Tech</div>
         </div>
         <div class="project-title">VAULT – SharePoint Document Management System</div>
         <div class="project-desc">A secure SharePoint Online document management portal enabling fast and accurate retrieval of confidential documents through custom filters, metadata-driven views, and advanced search. Built with SPFx, ReactJS, and Power Automate with strong access control.</div>
@@ -836,9 +990,9 @@
       <div class="project-card reveal delay-2">
         <div class="project-header">
           <div class="project-icon">🏥</div>
-          <div class="project-client-badge">Amgen</div>
+          <div class="project-client-badge">Pharma Enterprise</div>
         </div>
-        <div class="project-title">Amgen GL&P SharePoint Training Portal</div>
+        <div class="project-title">GL&amp;P SharePoint Training Portal</div>
         <div class="project-desc">A centralized, globally accessible training data solution for healthcare staff to stay current on conditions, guidelines, and care procedures. Features dynamic page web parts, card/list view toggles, server-side pagination, and Power Automate governance flows.</div>
         <div class="project-techs">
           <span class="tech-tag">SPFx</span>
@@ -853,7 +1007,7 @@
       <div class="project-card reveal delay-3">
         <div class="project-header">
           <div class="project-icon">🗓️</div>
-          <div class="project-client-badge">Medtronic</div>
+          <div class="project-client-badge">Healthcare Tech</div>
         </div>
         <div class="project-title">MIC Room Booking Application</div>
         <div class="project-desc">A Power Apps Canvas application for scheduling training rooms across Japan, Korea, and Singapore. Features multi-language support, role-based and region-based visibility, Power BI dashboard for booking insights, and automated approval and reminder flows.</div>
@@ -870,7 +1024,7 @@
       <div class="project-card reveal delay-4">
         <div class="project-header">
           <div class="project-icon">📦</div>
-          <div class="project-client-badge">Amgen</div>
+          <div class="project-client-badge">Pharma Enterprise</div>
         </div>
         <div class="project-title">R&D Supplier Management System</div>
         <div class="project-desc">A Canvas PowerApps solution backed by Dataverse for tracking and managing suppliers and their services. Includes Dataverse table relationships, business rules, field-level security, audit logging, and automated supplier verification workflows via Power Automate.</div>
@@ -882,6 +1036,85 @@
           <span class="tech-tag">Audit Logging</span>
           <span class="tech-tag">Business Rules</span>
         </div>
+
+      <div class="project-card reveal delay-1">
+        <div class="project-header">
+          <div class="project-icon">🤖</div>
+          <div class="project-client-badge">AI &amp; Copilot</div>
+        </div>
+        <div class="project-title">Insurance AI Agent – Intelligent Multi-Agent Copilot System</div>
+        <div class="project-desc">An AI-powered insurance assistant built with Microsoft Copilot Studio that interprets user intent, orchestrates multiple child agents, and delivers accurate context-aware responses — integrating SharePoint Online as a knowledge base, Dataverse via MCP for FAQ retrieval, and external systems via REST APIs.</div>
+        <div class="project-highlights">
+          <div class="proj-highlight">🧠 Intent-based response system with dynamic routing logic</div>
+          <div class="proj-highlight">🔗 Multi-agent orchestration consolidating responses from child agents</div>
+          <div class="proj-highlight">📊 SharePoint Online knowledge base + Dataverse MCP integration</div>
+          <div class="proj-highlight">📈 Reduced manual support via automated conversational workflows</div>
+        </div>
+        <div class="project-techs" style="margin-top:0.75rem;">
+          <span class="tech-tag">Copilot Studio</span>
+          <span class="tech-tag">Power Virtual Agents</span>
+          <span class="tech-tag">REST APIs</span>
+          <span class="tech-tag">Custom Connectors</span>
+          <span class="tech-tag">SharePoint Online</span>
+          <span class="tech-tag">Dataverse (MCP)</span>
+          <span class="tech-tag">Conversational AI</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-label">Microsoft Credentials</div>
+      <h2 class="section-title">Certifications</h2>
+      <p class="section-sub">Validated Microsoft credentials demonstrating expertise in Power Platform and Azure fundamentals.</p>
+    </div>
+    <div class="cert-grid">
+
+      <div class="cert-card reveal delay-1">
+        <a class="cert-card-link" href="https://www.credly.com/badges/58bb4305-8235-4ee0-8eea-a0bb531c6bea/public_url" target="_blank" rel="noopener" title="View PL-900 Certificate on Credly">
+          <div class="cert-badge">
+            <img
+              src="https://images.credly.com/size/340x340/images/3a6b33e3-7b25-4917-9768-2a1bff9ff38b/microsoft-certified-fundamentals-badge.svg"
+              alt="Microsoft PL-900 Badge"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<svg viewBox=\'0 0 23 23\' xmlns=\'http://www.w3.org/2000/svg\'><rect width=\'11\' height=\'11\' fill=\'#f25022\'/><rect x=\'12\' width=\'11\' height=\'11\' fill=\'#7fba00\'/><rect y=\'12\' width=\'11\' height=\'11\' fill=\'#00a4ef\'/><rect x=\'12\' y=\'12\' width=\'11\' height=\'11\' fill=\'#ffb900\'/></svg>'"
+            />
+          </div>
+          <div class="cert-body">
+            <div class="cert-name">Microsoft Certified: Power Platform Fundamentals</div>
+            <div class="cert-issuer">Microsoft Corporation</div>
+            <div class="cert-meta">
+              <span class="cert-id">PL-900</span>
+              <span class="cert-status">✓ Certified</span>
+              <span class="cert-verify">View Badge ↗</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="cert-card reveal delay-2">
+        <a class="cert-card-link" href="https://www.credly.com/badges/8b9aec6b-9d14-4c80-8e02-b371b3b30f7f" target="_blank" rel="noopener" title="View AZ-900 Certificate on Credly">
+          <div class="cert-badge">
+            <img
+              src="https://images.credly.com/size/340x340/images/be8fcaeb-c769-4858-b567-ffaaa73ce8cf/image.png"
+              alt="Microsoft AZ-900 Badge"
+              onerror="this.style.display='none';this.parentElement.innerHTML='<svg viewBox=\'0 0 23 23\' xmlns=\'http://www.w3.org/2000/svg\'><rect width=\'11\' height=\'11\' fill=\'#f25022\'/><rect x=\'12\' width=\'11\' height=\'11\' fill=\'#7fba00\'/><rect y=\'12\' width=\'11\' height=\'11\' fill=\'#00a4ef\'/><rect x=\'12\' y=\'12\' width=\'11\' height=\'11\' fill=\'#ffb900\'/></svg>'"
+            />
+          </div>
+          <div class="cert-body">
+            <div class="cert-name">Microsoft Certified: Azure Fundamentals</div>
+            <div class="cert-issuer">Microsoft Corporation</div>
+            <div class="cert-meta">
+              <span class="cert-id">AZ-900</span>
+              <span class="cert-status">✓ Certified</span>
+              <span class="cert-verify">View Badge ↗</span>
+            </div>
+          </div>
+        </a>
       </div>
 
     </div>
@@ -902,6 +1135,106 @@
         <div class="edu-college">Vignan's Institute of Information and Technology</div>
         <div class="edu-location">📍 Visakhapatnam, Andhra Pradesh</div>
         <div class="edu-year">2017 – 2021</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- UDEMY CERTIFICATIONS -->
+<section id="udemy-certs">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="section-label">Continuous Learning</div>
+      <h2 class="section-title">Udemy Courses</h2>
+      <p class="section-sub">Self-paced courses completed to deepen expertise in SharePoint, Power Platform, and Microsoft technologies.</p>
+    </div>
+    <div class="cert-grid">
+
+      <div class="cert-card udemy-card reveal delay-1">
+        <a class="cert-card-link" href="https://ude.my/UC-e03015ca-d7ba-4cc9-bc27-62d5279ed252" target="_blank" rel="noopener" title="View Certificate on Udemy">
+          <div class="cert-badge udemy-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;flex-shrink:0"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z" fill="#A435F0"/><path d="M7.5 8.25v5.25a3 3 0 006 0V8.25H15v5.25a4.5 4.5 0 01-9 0V8.25h1.5zM17.25 8.25h1.5v8.25h-1.5zM18 6a1.125 1.125 0 110 2.25A1.125 1.125 0 0118 6z" fill="white"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-name">Mastering SharePoint Framework SPFx Development</div>
+            <div class="cert-issuer">Udemy · Kameswara Sarma Uppuluri</div>
+            <div class="cert-meta">
+              <span class="cert-id">⏱ 22 hrs</span>
+              <span class="cert-id">📅 Sept 2024</span>
+              <span class="cert-tag" style="--tag-color:#3b82f6">Core Skill</span>
+              <span class="cert-verify">View Certificate ↗</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="cert-card udemy-card reveal delay-2">
+        <a class="cert-card-link" href="https://ude.my/UC-ded847c4-d107-4c95-bf42-745efd005b4e" target="_blank" rel="noopener" title="View Certificate on Udemy">
+          <div class="cert-badge udemy-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;flex-shrink:0"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z" fill="#A435F0"/><path d="M7.5 8.25v5.25a3 3 0 006 0V8.25H15v5.25a4.5 4.5 0 01-9 0V8.25h1.5zM17.25 8.25h1.5v8.25h-1.5zM18 6a1.125 1.125 0 110 2.25A1.125 1.125 0 0118 6z" fill="white"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-name">Power Apps – Complete Guide to Microsoft PowerApps</div>
+            <div class="cert-issuer">Udemy · Henry Habib</div>
+            <div class="cert-meta">
+              <span class="cert-id">⏱ 9 hrs</span>
+              <span class="cert-id">📅 Oct 2023</span>
+              <span class="cert-tag" style="--tag-color:#a855f7">Core Skill</span>
+              <span class="cert-verify">View Certificate ↗</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="cert-card udemy-card reveal delay-3">
+        <a class="cert-card-link" href="https://ude.my/UC-63e73215-d4b7-41e0-887d-7941260b4176" target="_blank" rel="noopener" title="View Certificate on Udemy">
+          <div class="cert-badge udemy-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;flex-shrink:0"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z" fill="#A435F0"/><path d="M7.5 8.25v5.25a3 3 0 006 0V8.25H15v5.25a4.5 4.5 0 01-9 0V8.25h1.5zM17.25 8.25h1.5v8.25h-1.5zM18 6a1.125 1.125 0 110 2.25A1.125 1.125 0 0118 6z" fill="white"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-name">Microsoft Power Automate (Flow) Crash Course</div>
+            <div class="cert-issuer">Udemy · Alireza Aliabadi</div>
+            <div class="cert-meta">
+              <span class="cert-id">⏱ 8 hrs</span>
+              <span class="cert-id">📅 Aug 2022</span>
+              <span class="cert-tag" style="--tag-color:#0ea5e9">Core Skill</span>
+              <span class="cert-verify">View Certificate ↗</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="cert-card udemy-card reveal delay-4">
+        <a class="cert-card-link" href="https://ude.my/UC-2ffbbae7-c6a6-423a-95bf-28c310350454" target="_blank" rel="noopener" title="View Certificate on Udemy">
+          <div class="cert-badge udemy-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;flex-shrink:0"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z" fill="#A435F0"/><path d="M7.5 8.25v5.25a3 3 0 006 0V8.25H15v5.25a4.5 4.5 0 01-9 0V8.25h1.5zM17.25 8.25h1.5v8.25h-1.5zM18 6a1.125 1.125 0 110 2.25A1.125 1.125 0 0118 6z" fill="white"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-name">Microsoft Copilot Studio – The Copilot Studio Masterclass</div>
+            <div class="cert-issuer">Udemy · Henry Habib, The Intelligent Worker</div>
+            <div class="cert-meta">
+              <span class="cert-id">⏱ 12 hrs</span>
+              <span class="cert-id">📅 Jan 2026</span>
+              <span class="cert-tag" style="--tag-color:#22c55e">AI & Copilot</span>
+              <span class="cert-verify">View Certificate ↗</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="cert-card udemy-card reveal delay-1">
+        <a class="cert-card-link" href="https://ude.my/UC-acd2f9eb-40f3-4531-a170-948220590794" target="_blank" rel="noopener" title="View Certificate on Udemy">
+          <div class="cert-badge udemy-badge">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;flex-shrink:0"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z" fill="#A435F0"/><path d="M7.5 8.25v5.25a3 3 0 006 0V8.25H15v5.25a4.5 4.5 0 01-9 0V8.25h1.5zM17.25 8.25h1.5v8.25h-1.5zM18 6a1.125 1.125 0 110 2.25A1.125 1.125 0 0118 6z" fill="white"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-name">Responsive Web Design: HTML5 + CSS3 for Entrepreneurs</div>
+            <div class="cert-issuer">Udemy · Andrew Eddy, Margot Dukes</div>
+            <div class="cert-meta">
+              <span class="cert-id">⏱ 5.5 hrs</span>
+              <span class="cert-id">📅 Nov 2021</span>
+              <span class="cert-tag" style="--tag-color:#f59e0b">Frontend</span>
+              <span class="cert-verify">View Certificate ↗</span>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </div>
